@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y python3
 
 ADD index.html /app/
 
+EXPOSE 8000
+
 WORKDIR /app
 
 CMD ["python3", "-m http.server"]
