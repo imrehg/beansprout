@@ -1,6 +1,6 @@
-FROM armv7/armhf-archlinux:latest
+FROM armv7/armhf-debian:latest
 
-RUN pacman -Sy && pacman -S --noconfirm python
+RUN apt-get update && apt-get install -y python
 
 ADD index.html /app/
 
