@@ -1,9 +1,7 @@
-FROM armv7/armhf-debian:latest
-
-RUN apt-get update && apt-get install -y python
+FROM resin/vab820-quad-python:latest
 
 ADD index.html /app/
 
 WORKDIR /app
 
-CMD ["pyton", "-m http.server"]
+CMD ["python3", "-m http.server"]
