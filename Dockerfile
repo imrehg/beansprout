@@ -8,4 +8,4 @@ EXPOSE 8000
 
 WORKDIR /app
 
-CMD ["python3", "web.py"]
+CMD ["python3", "app.py"]
