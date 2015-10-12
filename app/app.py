@@ -15,8 +15,9 @@ class GPIO:
         direction.close()
 
     def setValue(self, value):
-        value = open("/sys/class/gpio/gpio%d/value" %(self.pin),"w")
-        value.write(value)
+        valueentry = open("/sys/class/gpio/gpio%d/value" %(self.pin),"w")
+        valueentry.write(value)
+        valueentry.close()
         
     def high(self):
         self.setValue(str(1))
