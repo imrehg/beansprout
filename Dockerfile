@@ -1,6 +1,4 @@
-FROM resin/vab820-quad-buildpack-deps:latest
-
-RUN apt-get update && apt-get install -y python
+FROM resin/vab820-quad-python
 
 ADD app /app
 
